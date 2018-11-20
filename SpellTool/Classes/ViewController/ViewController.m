@@ -8,9 +8,13 @@
 
 #import "ViewController.h"
 #import <AipOcrSdk/AipOcrSdk.h>
+#import "ComDefined.h"
+#import "NSString+YYTransformPinyin.h"
 
 
-@interface ViewController ()
+@interface ViewController () <UIAlertViewDelegate> {
+    UITextView *textView;
+}
 
 @end
 
@@ -24,18 +28,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //     授权方法1：在此处填写App的Api Key/Secret Key
-    [[AipOcrService shardService] authWithAK:@"hYvAmT5b522dBtjQmpjs5k6H" andSK:@"Bc253oivGqm6kPZNZ776xrXzRww0Gf5N"];
+//    [[AipOcrService shardService] authWithAK:@"hYvAmT5b522dBtjQmpjs5k6H" andSK:@"Bc253oivGqm6kPZNZ776xrXzRww0Gf5N"];
     
     
     // 授权方法2（更安全）： 下载授权文件，添加至资源
-    //    NSString *licenseFile = [[NSBundle mainBundle] pathForResource:@"aip" ofType:@"license"];
-    //    NSData *licenseFileData = [NSData dataWithContentsOfFile:licenseFile];
-    //    if(!licenseFileData) {
-    //        [[[UIAlertView alloc] initWithTitle:@"授权失败" message:@"授权文件不存在" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
-    //    }
-    //    [[AipOcrService shardService] authWithLicenseFileData:licenseFileData];
+        NSString *licenseFile = [[NSBundle mainBundle] pathForResource:@"aip" ofType:@"license"];
+        NSData *licenseFileData = [NSData dataWithContentsOfFile:licenseFile];
+        if(!licenseFileData) {
+            [[[UIAlertView alloc] initWithTitle:@"授权失败" message:@"授权文件不存在" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+        }
+        [[AipOcrService shardService] authWithLicenseFileData:licenseFileData];
     
-//    [self configCallback];
+    [self configCallback];
+    
+    CGFloat width = MAIN_SCREEN_WIDTH;
+    CGFloat height = MAIN_SCREEN_HEIGHT;
+    CGFloat widthButton = 100;
+    CGFloat edge = 20;
+    //文本
+    textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 20, width, height - widthButton - edge)];
+    textView.backgroundColor = [UIColor lightGrayColor];
+    textView.font = [UIFont systemFontOfSize:16];
+    [self.view addSubview:textView];
+    
+    //按钮
+    UIButton *bt_scan = [[UIButton alloc] initWithFrame:CGRectMake((width - widthButton)/2, height -  widthButton, widthButton, widthButton)];
+    [bt_scan setBackgroundColor:[UIColor greenColor]];
+    [bt_scan setTitle:@"拍照" forState:UIControlStateNormal];
+    [bt_scan setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [bt_scan addTarget:self action:@selector(generalOCR) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:bt_scan];
 }
 
 - (void)configCallback {
@@ -73,8 +95,12 @@
         }
 
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:weakSelf cancelButtonTitle:@"确定" otherButtonTitles:nil];
-            [alertView show];
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:weakSelf cancelButtonTitle:@"确定" otherButtonTitles:nil];
+//            [alertView show];
+            NSString *pinyin = [message transformToPinyin];
+            textView.text = [NSString stringWithFormat:@"%@\n%@",message,pinyin];
+            
+            [self dismissViewControllerAnimated:YES completion:nil];
         }];
     };
 
@@ -115,5 +141,10 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
+
+#pragma mark UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

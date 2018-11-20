@@ -21,6 +21,8 @@
 		9FA907F521A2AB3300AF7A3C /* AipOcrSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA907EC21A2AA9600AF7A3C /* AipOcrSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FA907F621A2AB3300AF7A3C /* IdcardQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA907ED21A2AA9700AF7A3C /* IdcardQuality.framework */; };
 		9FA907F721A2AB3300AF7A3C /* IdcardQuality.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA907ED21A2AA9700AF7A3C /* IdcardQuality.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FA907FA21A3BD6200AF7A3C /* aip.license in Resources */ = {isa = PBXBuildFile; fileRef = 9FA907F921A3BD6100AF7A3C /* aip.license */; };
+		9FA907FE21A3DCA600AF7A3C /* NSString+YYTransformPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA907FD21A3DCA600AF7A3C /* NSString+YYTransformPinyin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,10 @@
 		9FA907EC21A2AA9600AF7A3C /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
 		9FA907ED21A2AA9700AF7A3C /* IdcardQuality.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdcardQuality.framework; sourceTree = "<group>"; };
 		9FA907EE21A2AA9700AF7A3C /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
+		9FA907F921A3BD6100AF7A3C /* aip.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aip.license; sourceTree = "<group>"; };
+		9FA907FB21A3D3E000AF7A3C /* ComDefined.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComDefined.h; sourceTree = "<group>"; };
+		9FA907FC21A3DCA600AF7A3C /* NSString+YYTransformPinyin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YYTransformPinyin.h"; sourceTree = "<group>"; };
+		9FA907FD21A3DCA600AF7A3C /* NSString+YYTransformPinyin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYTransformPinyin.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,7 @@
 		9F31F6F3219177AA006F7C0A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				9FA907F921A3BD6100AF7A3C /* aip.license */,
 				9F31F6F4219177AA006F7C0A /* AppDelegate.h */,
 				9F31F6F5219177AA006F7C0A /* AppDelegate.m */,
 				9F31F6F6219177AA006F7C0A /* main.m */,
@@ -191,6 +198,8 @@
 		9F31F6F7219177AA006F7C0A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				9FA907FC21A3DCA600AF7A3C /* NSString+YYTransformPinyin.h */,
+				9FA907FD21A3DCA600AF7A3C /* NSString+YYTransformPinyin.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -198,6 +207,7 @@
 		9F31F6F8219177AA006F7C0A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9FA907FB21A3D3E000AF7A3C /* ComDefined.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -365,6 +375,7 @@
 			files = (
 				9F31F69B21917216006F7C0A /* LaunchScreen.storyboard in Resources */,
 				9F31F6F12191770F006F7C0A /* Assets.xcassets in Resources */,
+				9FA907FA21A3BD6200AF7A3C /* aip.license in Resources */,
 				9F31F69621917207006F7C0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +404,7 @@
 				9F31F709219177AA006F7C0A /* ViewController.m in Sources */,
 				9F31F705219177AA006F7C0A /* main.m in Sources */,
 				9F31F704219177AA006F7C0A /* AppDelegate.m in Sources */,
+				9FA907FE21A3DCA600AF7A3C /* NSString+YYTransformPinyin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
