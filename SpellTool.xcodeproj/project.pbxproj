@@ -15,6 +15,7 @@
 		9F31F704219177AA006F7C0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F31F6F5219177AA006F7C0A /* AppDelegate.m */; };
 		9F31F705219177AA006F7C0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F31F6F6219177AA006F7C0A /* main.m */; };
 		9F31F709219177AA006F7C0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F31F703219177AA006F7C0A /* ViewController.m */; };
+		9F4E619C21A5AD1100DA4554 /* OrcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E619B21A5AD1100DA4554 /* OrcTool.m */; };
 		9FA907F221A2AB3300AF7A3C /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA907EE21A2AA9700AF7A3C /* AipBase.framework */; };
 		9FA907F321A2AB3300AF7A3C /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA907EE21A2AA9700AF7A3C /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FA907F421A2AB3300AF7A3C /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA907EC21A2AA9600AF7A3C /* AipOcrSdk.framework */; };
@@ -75,6 +76,8 @@
 		9F31F6F6219177AA006F7C0A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F31F702219177AA006F7C0A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9F31F703219177AA006F7C0A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9F4E619A21A5AD1100DA4554 /* OrcTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrcTool.h; sourceTree = "<group>"; };
+		9F4E619B21A5AD1100DA4554 /* OrcTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrcTool.m; sourceTree = "<group>"; };
 		9FA907EC21A2AA9600AF7A3C /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
 		9FA907ED21A2AA9700AF7A3C /* IdcardQuality.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdcardQuality.framework; sourceTree = "<group>"; };
 		9FA907EE21A2AA9700AF7A3C /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				9F31F6FF219177AA006F7C0A /* MainMenu */,
 				9F31F702219177AA006F7C0A /* ViewController.h */,
 				9F31F703219177AA006F7C0A /* ViewController.m */,
+				9F4E619A21A5AD1100DA4554 /* OrcTool.h */,
+				9F4E619B21A5AD1100DA4554 /* OrcTool.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 				9F31F709219177AA006F7C0A /* ViewController.m in Sources */,
 				9F31F705219177AA006F7C0A /* main.m in Sources */,
 				9F31F704219177AA006F7C0A /* AppDelegate.m in Sources */,
+				9F4E619C21A5AD1100DA4554 /* OrcTool.m in Sources */,
 				9FA907FE21A3DCA600AF7A3C /* NSString+YYTransformPinyin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
