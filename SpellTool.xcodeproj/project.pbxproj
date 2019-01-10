@@ -240,21 +240,23 @@
 				9F31F700219177AA006F7C0A /* API */,
 				9F31F701219177AA006F7C0A /* Model */,
 			);
-			path = MainMenu;
+			name = MainMenu;
 			sourceTree = "<group>";
 		};
 		9F31F700219177AA006F7C0A /* API */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = API;
+			name = API;
+			path = MainMenu/API;
 			sourceTree = "<group>";
 		};
 		9F31F701219177AA006F7C0A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			name = Model;
+			path = MainMenu/Model;
 			sourceTree = "<group>";
 		};
 		9F31F70A21918082006F7C0A /* ThirdCode */ = {
