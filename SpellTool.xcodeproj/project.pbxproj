@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F142152221FDD450009037D /* YYDataStoreHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F142151221FDD450009037D /* YYDataStoreHelper.m */; };
+		9F142155221FDD7D0009037D /* MainMenuAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F142154221FDD7D0009037D /* MainMenuAPI.m */; };
+		9F142158221FDD910009037D /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F142157221FDD910009037D /* MainModel.m */; };
 		9F31F69621917207006F7C0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F31F69421917207006F7C0A /* Main.storyboard */; };
 		9F31F69B21917216006F7C0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F31F69921917216006F7C0A /* LaunchScreen.storyboard */; };
 		9F31F6A821917217006F7C0A /* SpellToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F31F6A721917217006F7C0A /* SpellToolTests.m */; };
@@ -60,6 +63,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F142150221FDD450009037D /* YYDataStoreHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDataStoreHelper.h; sourceTree = "<group>"; };
+		9F142151221FDD450009037D /* YYDataStoreHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYDataStoreHelper.m; sourceTree = "<group>"; };
+		9F142153221FDD7D0009037D /* MainMenuAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenuAPI.h; sourceTree = "<group>"; };
+		9F142154221FDD7D0009037D /* MainMenuAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMenuAPI.m; sourceTree = "<group>"; };
+		9F142156221FDD910009037D /* MainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
+		9F142157221FDD910009037D /* MainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		9F31F68B21917207006F7C0A /* SpellTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpellTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F31F69521917207006F7C0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F31F69A21917216006F7C0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -218,6 +227,8 @@
 		9F31F6F9219177AA006F7C0A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				9F142150221FDD450009037D /* YYDataStoreHelper.h */,
+				9F142151221FDD450009037D /* YYDataStoreHelper.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -246,6 +257,8 @@
 		9F31F700219177AA006F7C0A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9F142153221FDD7D0009037D /* MainMenuAPI.h */,
+				9F142154221FDD7D0009037D /* MainMenuAPI.m */,
 			);
 			name = API;
 			path = MainMenu/API;
@@ -254,6 +267,8 @@
 		9F31F701219177AA006F7C0A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F142156221FDD910009037D /* MainModel.h */,
+				9F142157221FDD910009037D /* MainModel.m */,
 			);
 			name = Model;
 			path = MainMenu/Model;
@@ -408,11 +423,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F142155221FDD7D0009037D /* MainMenuAPI.m in Sources */,
 				9F31F709219177AA006F7C0A /* ViewController.m in Sources */,
 				9F31F705219177AA006F7C0A /* main.m in Sources */,
 				9F31F704219177AA006F7C0A /* AppDelegate.m in Sources */,
+				9F142158221FDD910009037D /* MainModel.m in Sources */,
 				9F4E619C21A5AD1100DA4554 /* OrcTool.m in Sources */,
 				9FA907FE21A3DCA600AF7A3C /* NSString+YYTransformPinyin.m in Sources */,
+				9F142152221FDD450009037D /* YYDataStoreHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
